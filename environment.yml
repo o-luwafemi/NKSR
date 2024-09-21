@@ -1,6 +1,6 @@
-name: nksr
+name: nksr2
 channels:
-  - pyg
+  # - pyg
   - nvidia/label/cuda-11.8.0
   - pytorch
   - conda-forge
@@ -33,10 +33,10 @@ dependencies:
   - ipython
   - matplotlib
   - tqdm
-  - pyg
+  # - pyg
   - rich
   - pandas
-  - pytorch-scatter
+  # - pytorch-scatter
   - omegaconf
   - flatten-dict
   - pyntcloud

@@ -26,7 +26,7 @@ if __name__ == '__main__':
     reconstructor = nksr.Reconstructor(device)
     reconstructor.chunk_tmp_device = torch.device("cpu")
 
-    field = reconstructor.reconstruct(input_xyz, input_normal, detail_level=None, chunk_size=50.0)
+    field = reconstructor.reconstruct(input_xyz, input_normal, detail_level=1.0, chunk_size=50.0)
     mesh = field.extract_dual_mesh(mise_iter=1)
 
     vis.show_3d([vis.mesh(mesh.v, mesh.f)], [buda_geom])

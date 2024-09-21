@@ -18,6 +18,7 @@ from common import load_waymo_example, warning_on_low_memory
 
 if __name__ == '__main__':
     warning_on_low_memory(20000.0)
+    torch.cuda.empty_cache()
     xyz_np, sensor_np = load_waymo_example()
 
     device = torch.device("cuda:0")
@@ -32,7 +33,7 @@ if __name__ == '__main__':
         # Minor configs for better efficiency (not necessary)
         approx_kernel_grad=True, solver_tol=1e-4, fused_mode=True, 
         # Chunked reconstruction (if OOM)
-        # chunk_size=51.2,
+        chunk_size=51.2,
         preprocess_fn=nksr.get_estimate_normal_preprocess_fn(64, 85.0)
     )
     

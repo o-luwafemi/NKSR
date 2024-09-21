@@ -21,6 +21,22 @@ def load_bunny_example():
     bunny_geom = vis.from_file(bunny_path)
     return bunny_geom
 
+def load_pix4dmatic():
+    pix4dmatic_path = Path(__file__).parent.parent.parent / "dataset" / "pix4dmatic" / "Pix4Dmatic_example-part.ply"
+    pix4dmatic_geom = vis.from_file(pix4dmatic_path)
+    return pix4dmatic_geom
+
+def load_olympic_flame():
+    olympic_flame_path = Path(__file__).parent.parent.parent / "dataset" / "olympic_flame.ply"
+    olympic_flame_geom = vis.from_file(olympic_flame_path)
+    return olympic_flame_geom
+
+
+def load_eagle():
+    eagle_path = Path(__file__).parent.parent.parent / "dataset" / "eagle_carving.ply"
+    eagle_geom = vis.from_file(eagle_path)
+    return eagle_geom
+
 
 def load_spot_example():
     spot_path = Path(__file__).parent.parent / "assets" / "spot.ply"
